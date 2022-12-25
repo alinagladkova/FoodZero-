@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>"@@FoodZero"</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- Отключает принудительную ссылку у номера телефона на iOS -->
+	<link rel="stylesheet" href="css/style.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+	<div class="header__container _container">
+		<div class="header__row">
+			<a class="header__logo" href="#"><img src="../img/Logo.svg" alt="Icon"></a>
+			<nav class="header__menu menu">
+				<div class="menu__icon icon-menu">
+					<span></span>
+				</div>
+				<div class="menu__body">
+					<ul class="menu__list">
+						<li><a class="menu__link" href="#">Home</a></li>
+						<li><a class="menu__link" href="#">Menu</a></li>
+						<li><a class="menu__link" href="#">Blogs</a>
+							<ul class="menu__sub-list">
+								<li>
+									<a href="#" class="menu__sub-link">1 Column</a>
+								</li>
+								<li>
+									<a href="#" class="menu__sub-link">2Columns</a>
+								</li>
+								<li>
+									<a href="#" class="menu__sub-link">Sidebar Post</a>
+								</li>
+							</ul>
+						</li>
+						<li><a class="menu__link" href="#">About</a></li>
+						<li><a class="menu__link" href="#">Contact</a></li>
+					</ul>
+					<div class="menu__contact contact-info">
+						<subtitle class="contact-info__subtitle">Contact</subtitle>
+						<div class="contact-info__data">
+							<a class="contact-info__phone" href="tel:+86852346000">+86 852 346 000</a>
+							<a class="contact-info__email" href="mailto:info@foodzero.com">info@foodzero.com</a>
+						</div>
+						<a class="contact-info__address" href="#">1959 Sepulveda Blvd.
+							Culver City, CA, 90230</a>
+						<div class="contact-info__social-media social-media">
+							<a class="social-media__item" href="#"><img src="../img/Icon_instagram.svg" alt="Icon"></a>
+							<a class="social-media__item" href="#"><img src="../img/Icon_twitter.svg" alt="Icon"></a>
+							<a class="social-media__item" href="#"><img src="../img/Icon_facebook.svg" alt="Icon"></a>
+							<a class="social-media__item" href="#"><img src="../img/Icon_youtube.svg" alt="Icon"></a>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<div class="header__contact">
+				<a class="header__phone" href="tel:+86852346000">+86 852 346 000</a>
+				<a class="header__button" href="#">Reservations</a>
+			</div>
+		</div>
+	</div>
+</header>
+		<main class="page">
+			<section class="mainscreen">
+				<div class="mainscreen__container _container">
+					<div class="mainscreen__mainrow">
+						<h1 class="mainrow__title">Get in Touch</h1>
+						<subtitle class="mainrow__subtitle">The freshest ingredients for you every day</subtitle>
+					</div>
+					<div class="mainscreen__secondrow">
+						<div class="mainscreen__weeekday">
+							<p class="mainscreen__opentime">Open Time</p>
+							<p class="mainscreen__day">Sunday - Friday</p>
+						</div>
+						<div class="mainscreen__time">
+							<p class="mainscreen__column">Brunch
+								11:00–12:00
+							</p>
+							<p class="mainscreen__column">Lunch
+								13:00–17:00
+							</p>
+							<p class="mainscreen__column">Dinner
+								18:00–20:00
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="details">
+				<div class="details__container _container">
+					<div class="details__contact">
+						<div class="contact__image">
+							<img src="img/Image_1.png" alt="Picture">
+						</div>
+						<div class="contact__info">
+							<p>We can be contacted via
+								email <a href="mailto:info@foodzero.com">info@foodzero.com</a></p>
+							<span>or telephone on <a href="tel:+86852346000">+86 852 346
+									000</a></span>
+						</div>
+					</div>
+					<div class="details__address">
+						<div class="address__info">
+							<p class="address__text">We are located in 1959 Sepulveda Blvd. Culver City, CA, 90230</p>
+							<a class="address__button" href="#">
+								<button class="address__btn" type="submit">View in maps</button>
+							</a>
+						</div>
+						<div class="address__image">
+							<img src="img/Image_2.png" alt="Picture">
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="reservation">
+				<div class="reservation__container _container">
+					<div class="reservation__block">
+						<h1 class="reservation__title">Make a Reservation</h1>
+						<p class="reservation__text">Get in touch with restaurant</p>
+						<form class="reservation__form" action="#" id="form" name="main">
+							<div class="reservation__full-name">
+								<div class="reservation__firstname">
+									<input placeholder="First Name" type="text" name="userfirstname" />
+								</div>
+								<div class="reservation__lastname">
+									<input placeholder="Last Name" type="text" name="userlastname" />
+								</div>
+							</div>
+							<div class="reservation__email">
+								<input placeholder="Email" type="text" name="email" />
+							</div>
+							<div class="reservation__phone">
+								<input placeholder="Phone" type="tel" name="phone" />
+							</div>
+							<div class="reservation__when">
+								<div class="reservation__date">
+									<input placeholder="16/22/2021" type="text" name="date" />
+								</div>
+								<select class="reservation__time">
+									<option selected value="6:00pm">6:00 pm</option>
+									<option value="7:00pm">7:00 pm</option>
+									<option value="8:00pm">8:00 pm</option>
+								</select>
+							</div>
+							<select class="reservation__visitors">
+								<option selected value="2 Person">2 Person</option>
+								<option value="3 Person">3 Person</option>
+								<option value="4 Person">4 Person</option>
+							</select>
+							<div class="reservation__button">
+								<button class="reservation__btn" type="submit">Book Now</button>
+							</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+	<div class="footer__container _container">
+		<div class="footer__upperside">
+			<div class="footer__column">
+				<p class="footer__logo">Food Zero.</p>
+			</div>
+			<div class="footer__column">
+				<div class="contact-info">
+					<subtitle class="contact-info__subtitle">Contact</subtitle>
+					<div class="contact-info__data">
+						<a class="contact-info__phone" href="tel:+86852346000">+86 852 346 000</a>
+						<a class="contact-info__email" href="mailto:info@foodzero.com">info@foodzero.com</a>
+					</div>
+					<a class="contact-info__address" href="#">1959 Sepulveda Blvd.
+						Culver City, CA, 90230</a>
+				</div>
+			</div>
+			<div class="footer__column">
+				<div class="subscribe-block">
+					<subtitle class="subscribe-block__subtitle">Never Miss a Recipe</subtitle>
+					<div class="subscribe-block__field">
+						<form class="subscribe-form" action="#" id="form" name="email">
+							<div class="subscribe-form__email">
+								<input class="input _req _email" placeholder="Email Address" type="text" name="email" />
+							</div>
+							<div class="subscribe-form__button">
+								<button class="subscribe-form__btn" type="submit">Subscribe</button>
+							</div>
+						</form>
+					</div>
+					<div class="subscribe-block__text">
+						<p>Join our subscribers and get best recipe delivered each week!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__middle">
+			<hr class="footer__line">
+		</div>
+		<div class="footer__bottom">
+			<div class="footer__rights">
+				<p>© 2020 Zero Inc. All rights Reserved</p>
+			</div>
+			<div class="footer__social-media social-media">
+				<a class="social-media__item" href="#"><img src="../img/Icon_instagram.svg" alt="Icon"></a>
+				<a class="social-media__item" href="#"><img src="../img/Icon_twitter.svg" alt="Icon"></a>
+				<a class="social-media__item" href="#"><img src="../img/Icon_facebook.svg" alt="Icon"></a>
+				<a class="social-media__item" href="#"><img src="../img/Icon_youtube.svg" alt="Icon"></a>
+			</div>
+		</div>
+	</div>
+</footer>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	<script src="js/app.min.js"></script>
+</body>
+
+</html>
