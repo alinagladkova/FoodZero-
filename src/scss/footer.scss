@@ -1,0 +1,194 @@
+.footer {
+	background-color: #233000;
+	&__container {
+	}
+	&__upperside {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+	&__column {
+		display: flex;
+		@include adaptiveValue ("margin-top", 143, 25, 0);
+		@include adaptiveValue ("margin-bottom", 137, 22, 0);
+		align-items: center;
+	}
+	&__logo {
+		font-family: 'Rufina';
+		@include adaptiveValue ("font-size", 68, 20, 0);
+		@include adaptiveValue ("line-height", 84, 22, 0);
+		color: #FFFFFF;
+		flex-basis: 10%;
+	}
+	&__contact {
+		flex-basis: 11.3%;
+	}
+	&__subscribe {
+		flex-basis: 47.6%;
+	}
+	&__middle {
+		position: absolute;
+		width: 100%;
+		border: none;
+		border-top: 2px dashed #FFFFFF;
+		left: 0;
+	}
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__rights {
+		@include adaptiveValue ("margin-top", 58, 24, 0);
+		@include adaptiveValue ("margin-bottom", 74, 24, 0);
+		@include adaptiveValue ("font-size", 24, 10, 0);
+		line-height: 140%;
+		letter-spacing: 0.02em;
+		color: #FFFFFF;
+	}
+	&__social-media {
+	}
+}
+.footer .contact-info__subtitle::after{
+	display: none;
+}
+.footer .contact-info {
+	display: block;
+	@include adaptiveValue ("width", 224, 100, 0);
+}
+.subscribe-block {
+	&__field {
+		display: flex;
+	}
+	&__subtitle {
+		font-family: 'Rufina';
+		display: inline-block;
+		@include adaptiveValue ("font-size", 32, 18, 0);
+		@include adaptiveValue ("line-height", 48, 18, 0);
+		@include adaptiveValue ("margin-bottom", 55, 15, 0);
+		color: #FFFFFF;
+	}
+	&__text {
+		@include adaptiveValue ("font-size", 14, 12, 0);
+		@include adaptiveValue ("line-height", 17, 13, 0);
+		color: #000;
+		letter-spacing: 0.02em;
+	}
+}
+.subscribe-form {
+	&__email {
+		border: 2px solid #FFFFFF;
+		@include adaptiveValue ("margin-bottom", 15, 5, 0);
+		@include adaptiveValue ("width", 523, 174, 0);
+		@include adaptiveValue ("height", 96, 32, 0);
+		@include adaptiveValue ("margin-right", 28, 5, 0);
+	}
+	&__button {
+	}
+	&__btn {
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include adaptiveValue ("width", 241, 91, 0);
+		@include adaptiveValue ("height", 88, 28, 0);
+		background: #5E6600;
+		font-family: 'Rufina';
+		@include adaptiveValue ("font-size", 32, 14, 0);
+		@include adaptiveValue ("line-height", 48, 19, 0);
+		color: #FFFFFF;
+	}
+}
+.subscribe-form__email:focus {
+	box-shadow:0 0 15px 4px rgba(255, 255, 255, 0.06);
+	}
+.subscribe-form__email._error {
+	border: 2px solid #993030;
+}
+input._req._email {
+	@include adaptiveValue ("width", 443, 144, 0);
+	@include adaptiveValue ("height", 36, 15, 0);
+	background: #233000;
+	color: #FFFFFF;
+	@include adaptiveValue ("font-size", 24, 14, 0);
+	line-height: 140%;
+	letter-spacing: 0.02em;
+	@include adaptiveValue ("margin-left", 40, 0, 0);
+	@include adaptiveValue ("margin-top", 30, 10, 0);
+	&::placeholder {
+		@include adaptiveValue ("font-size", 24, 14, 0);
+		line-height: 140%;
+		letter-spacing: 0.02em;
+		color: #FFFFFF;
+		
+}
+}
+.social-media {
+	&__item {
+		@include adaptiveValue ("width", 28, 14, 0);
+		@include adaptiveValue ("height", 22, 11, 0);
+		img {
+			max-width: 100%;
+		}
+	}
+}
+
+//MEDIA
+@media (max-width: 700px) {
+	.footer {
+		&__upperside {
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+		&__column {
+			margin: 15px;
+		}
+			&__logo {
+				flex-basis: 100%;
+				margin-top: 20px;
+			}
+	}
+	.footer .contact-info {
+		width: 100%;
+		text-align: center;
+		&__subtitle {
+			justify-content: center;
+			@include adaptiveValue ("font-size", 22, 20, 0);
+		}
+		&__address {
+			text-align: center;
+			width: 400px;
+			@include adaptiveValue ("font-size", 17, 13, 0);
+		}
+		&__data {
+			margin: 15px auto;
+			max-width: 200px;
+			@include adaptiveValue ("font-size", 17, 13, 0);
+			@include adaptiveValue ("line-height", 25, 18, 0);
+		}
+	}
+	.subscribe-block {
+		text-align: center;
+		&__subtitle {
+			margin-bottom: 10px;
+		}
+		&__field {
+			display: block;
+		}
+	}
+	.subscribe-form {
+		&__btn {
+		width: 100%;
+		margin-bottom: 10px;
+		}
+		&__email {
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
+	}
+	input._req._email {
+		width: 90%;
+	}
+}

@@ -1,0 +1,38 @@
+//======================================================================================
+.ibg{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	img{display: none;} // добавлены стили позиционирования картинки + саму картинку убираем через display: none
+}
+//======================================================================================
+/*.slick-slider{position: relative;
+	.slick-track,.slick-list {}
+	.slick-list{overflow: hidden;}
+	.slick-track{@include flexbox();align-items: flex-start;}
+	.slick-slide{}
+	.slick-dots{
+		padding: 104px 0 0 0;
+		@include flexbox();
+		justify-content:center;
+		align-items: center;
+		li{margin: 0 5px;
+			button{
+				font-size: 0;
+				width: 11px;
+				height: 11px;
+				border-radius: 50%;
+				background-color: rgba(40,47,53,0.0);
+				border: 1px solid #c8c8c8;
+			}
+			&.slick-active{
+				button{
+					width: 11px;
+					height: 11px;
+					background-color: #a9afb3;
+				}
+			}
+		}
+	}
+}*/
+//======================================================================================

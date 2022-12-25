@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/header.html',{})
+		<main class="page">
+			<section class="mainscreen">
+				<div class="mainscreen__container _container">
+					<div class="mainscreen__mainrow">
+						<h1 class="mainrow__title">Get in Touch</h1>
+						<subtitle class="mainrow__subtitle">The freshest ingredients for you every day</subtitle>
+					</div>
+					<div class="mainscreen__secondrow">
+						<div class="mainscreen__weeekday">
+							<p class="mainscreen__opentime">Open Time</p>
+							<p class="mainscreen__day">Sunday - Friday</p>
+						</div>
+						<div class="mainscreen__time">
+							<p class="mainscreen__column">Brunch
+								11:00–12:00
+							</p>
+							<p class="mainscreen__column">Lunch
+								13:00–17:00
+							</p>
+							<p class="mainscreen__column">Dinner
+								18:00–20:00
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="details">
+				<div class="details__container _container">
+					<div class="details__contact">
+						<div class="contact__image">
+							<img src="img/Image_1.png" alt="Picture">
+						</div>
+						<div class="contact__info">
+							<p>We can be contacted via
+								email <a href="mailto:info@foodzero.com">info@foodzero.com</a></p>
+							<span>or telephone on <a href="tel:+86852346000">+86 852 346
+									000</a></span>
+						</div>
+					</div>
+					<div class="details__address">
+						<div class="address__info">
+							<p class="address__text">We are located in 1959 Sepulveda Blvd. Culver City, CA, 90230</p>
+							<a class="address__button" href="#">
+								<button class="address__btn" type="submit">View in maps</button>
+							</a>
+						</div>
+						<div class="address__image">
+							<img src="img/Image_2.png" alt="Picture">
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="reservation">
+				<div class="reservation__container _container">
+					<div class="reservation__block">
+						<h1 class="reservation__title">Make a Reservation</h1>
+						<p class="reservation__text">Get in touch with restaurant</p>
+						<form class="reservation__form" action="#" id="form" name="main">
+							<div class="reservation__full-name">
+								<div class="reservation__firstname">
+									<input placeholder="First Name" type="text" name="userfirstname" />
+								</div>
+								<div class="reservation__lastname">
+									<input placeholder="Last Name" type="text" name="userlastname" />
+								</div>
+							</div>
+							<div class="reservation__email">
+								<input placeholder="Email" type="text" name="email" />
+							</div>
+							<div class="reservation__phone">
+								<input placeholder="Phone" type="tel" name="phone" />
+							</div>
+							<div class="reservation__when">
+								<div class="reservation__date">
+									<input placeholder="16/22/2021" type="text" name="date" />
+								</div>
+								<select class="reservation__time">
+									<option selected value="6:00pm">6:00 pm</option>
+									<option value="7:00pm">7:00 pm</option>
+									<option value="8:00pm">8:00 pm</option>
+								</select>
+							</div>
+							<select class="reservation__visitors">
+								<option selected value="2 Person">2 Person</option>
+								<option value="3 Person">3 Person</option>
+								<option value="4 Person">4 Person</option>
+							</select>
+							<div class="reservation__button">
+								<button class="reservation__btn" type="submit">Book Now</button>
+							</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/footer.html',{})
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	<script src="js/app.min.js"></script>
+</body>
+
+</html>

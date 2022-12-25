@@ -1,0 +1,464 @@
+@import "mixins.scss";
+//ШРИФТЫ
+@import url(https://fonts.googleapis.com/css?family=Lato:regular,900);
+@import url(https://fonts.googleapis.com/css?family=Inter:regular);
+@import url(https://fonts.googleapis.com/css?family=Rufina:regular,700);
+
+//@import "fonts";
+
+//ШРИФТ ПО УМОЛЧАНИЮ
+$fontfamily: "Lato";
+
+//ПЕРЕМЕННЫЕ
+$minwidth: 320;
+$maxWidth: 1920;
+$maxWidthContainer: 1664;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+
+//ОБНУЛЕНИЕ
+@import "null.scss";
+
+body {
+	
+}
+body._lock {
+	overflow: hidden;
+}
+
+//ОБОЛОЧКА
+.wrapper {
+	overflow: hidden;
+	min-height: 100%; //чтобы wrapper был на всю высоту
+	background: url('../img/bg_1.png') 0 0/100% auto no-repeat;
+}
+
+//ОСНОВНАЯ СЕТКА
+
+//упрощенное
+._container {
+	max-width: 1664px;
+	padding: 0 15px; //задаем отступы по 15px чтобы контейнер не ударялся о края странички
+	margin: 0px auto; //центровка контейнера
+}
+
+//ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ
+@import "ui.scss";
+@import "header.scss";
+@import "footer.scss";
+
+
+//==================================================================
+//MAIN BLOCK
+.page {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.mainscreen {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	&__container {
+		display:flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&__image {
+		height: 100%;
+		width: 100%;
+	}
+	&__mainrow {
+		flex-basis: 54%;
+		@include adaptiveValue ("margin-top", 254, 24, 0);
+		@include adaptiveValue ("margin-bottom", 93, 10, 0);
+	}
+	&__secondrow {
+		display: flex;
+		flex-basis: 41%;
+		align-items: flex-end;
+		flex-direction: column;
+		@include adaptiveValue ("margin-bottom", 130, 100, 0);
+	}
+	&__weeekday {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include adaptiveValue ("width", 696, 270, 0);
+	}
+	&__opentime {
+		font-family: 'Rufina';
+		position: relative;
+		align-items: center;
+		@include adaptiveValue ("font-size", 32, 14, 0);
+		@include adaptiveValue ("line-height", 48, 8, 0);
+		@include adaptiveValue ("margin-right", 359, 39, 0);
+		color: #FFFFFF;
+	}
+	&__day {
+		@include adaptiveValue ("font-size", 24, 12, 0);
+		line-height: 140%;
+		letter-spacing: 0.02em;
+		color: #FFFFFF;
+	}
+	&__time {
+		@include adaptiveValue ("font-size", 24, 13, 0);
+		@include adaptiveValue ("width", 696, 270, 0);
+		line-height: 140%;
+		letter-spacing: 0.02em;
+		color: #FFFFFF;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__column {
+		flex-direction: column;
+		@include adaptiveValue ("margin-top", 76, 16, 0);
+		@include adaptiveValue ("width", 143, 80, 0);
+	}
+}
+.mainscreen__opentime::after {
+	border-bottom-style: dashed;
+	content: '';
+	@include adaptiveValue ("width", 696, 270, 0);
+	@include adaptiveValue ("margin-top", 38, 5, 0);
+	position: absolute;
+	top: 100%;
+	left: 0;
+}
+.mainrow {
+	&__title {
+		font-family: 'Rufina';
+		@include adaptiveValue ("font-size", 148, 13, 0);
+		@include adaptiveValue ("line-height", 152, 20, 0);
+		@include adaptiveValue ("margin-bottom", 50, 5, 0);
+		color: #FFFFFF;
+	}
+	&__subtitle {
+		@include adaptiveValue ("width", 915, 75, 0);
+		@include adaptiveValue ("height", 48, 5, 0);
+		@include adaptiveValue ("font-size", 32, 12, 0);
+		@include adaptiveValue ("line-height", 48, 13, 0);
+		font-family: 'Rufina';
+		color: #FFFFFF;
+	}
+}
+
+@media (max-width: 600px) {
+	.mainrow {
+		&__subtitle {
+			display: none;
+		}
+	}
+	.mainscreen {
+		&__secondrow {
+			align-items: center;
+		}
+	}
+}
+@media (max-width: 500px) {
+	.mainscreen {
+		&__mainrow {
+			@include adaptiveValue ("margin-top", 254, 10, 0);
+			@include adaptiveValue ("margin-bottom", 93, 20, 0);
+		}
+	}
+}
+@media (max-width: 400px) {
+	.mainrow {
+		&__title {
+			display: none;
+		}
+	}
+	.mainscreen {
+		&__time {
+			width: 300px;
+		}
+	}
+}
+//==================================================================
+//SECOND BLOCK
+.details {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: url('../img/bg_2.png') 0 0/100% auto no-repeat;
+	@include adaptiveValue ("padding-top", 272, 0, 0);
+	&__container {
+	}
+	&__contact {
+		display: flex;
+		justify-content: space-between;
+		@include adaptiveValue ("margin-bottom", 145, 15, 0);
+	}
+	&__address {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include adaptiveValue ("margin-bottom", 185, 20, 0);
+	}
+}
+.contact {
+	&__image {
+		flex-basis: 48.2%;
+		img {
+			max-width: 100%;
+		}
+	}
+	&__info {
+		@include adaptiveValue ("margin-top", 370, 30, 0);
+		@include adaptiveValue ("font-size", 32, 14, 0);
+		@include adaptiveValue ("line-height", 48, 18, 0);
+		flex-basis: 39%;
+		font-family: 'Rufina';
+		font-weight: 700;
+		color: #233000;
+		p {
+			@include adaptiveValue ("width", 400, 130, 0);
+		}
+		span {
+			display: block;
+		}
+		a {
+			color: #9CAA00;
+		}
+	}
+}
+.contact__info {
+	a:hover {
+		text-decoration: underline;
+	}
+}
+.address {
+	&__info {
+		font-family: 'Rufina';
+		font-weight: 700;
+		color: #233000;
+		flex-basis: 42%;
+		@include adaptiveValue ("font-size", 32, 14, 0);
+		@include adaptiveValue ("line-height", 48, 16, 0);
+	}
+	&__text {
+	}
+	&__button {
+	}
+	&__btn {
+		font-family: 'Rufina';
+		font-weight: 700;
+		@include adaptiveValue ("font-size", 32, 14, 0);
+		@include adaptiveValue ("line-height", 48, 16, 0);
+		@include adaptiveValue ("margin-top", 53, 15, 0);
+		@include adaptiveValue ("width", 293, 130, 0);
+		@include adaptiveValue ("height", 88, 33, 0);
+		color: #233000;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: #FFFFFF;
+		border: 2px solid #000000;
+	}
+	&__image {
+		flex-basis: 47.6%;
+		img {
+			max-width: 100%;
+		}
+	}
+}
+.address__btn:hover {
+	box-shadow: 5px 5px 15px rgba(35, 35, 35, 0.482); 
+}
+
+@media (max-width: 800px) {
+	.contact {
+		&__info {
+			span {
+				@include adaptiveValue ("width", 400, 270, 0);
+			}
+		}
+	}
+}
+@media (max-width: 600px) {
+	.details__contact {
+		flex-direction: column;
+		align-items: center;
+	}
+	.contact {
+		&__info {
+			margin-top: -50px;
+			margin-bottom: 15px;
+			order: 1;
+			text-align: center;
+			p {
+					@include adaptiveValue ("width", 400, 300, 0);
+			}
+			span {
+				@include adaptiveValue ("width", 400, 300, 0);
+			}
+		}
+		&__image {
+			order: 2;
+		}
+	}
+}
+@media (max-width: 400px) {
+	.contact {
+		&__info {
+			flex-basis: 45%;
+		}
+	}
+}
+
+//==================================================================
+//RESERVATION PAGE
+.reservation {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: url('../img/bg_3.png') 0 0/100% 100% no-repeat;
+	@include adaptiveValue ("padding-top", 214, 10, 0);
+	&__container {
+	}
+	&__title {
+		text-align: center;
+		font-family: 'Rufina';
+		font-weight: 700;
+		@include adaptiveValue ("font-size", 108, 18, 0);
+		@include adaptiveValue ("line-height", 120, 18, 0);
+		color: #000000;
+		@include adaptiveValue ("margin-bottom", 17, 5, 0);
+	}
+	&__text {
+		@include adaptiveValue ("font-size", 24, 12, 0);
+		line-height: 140%;
+		letter-spacing: 0.02em;
+		color: #4D4D4D;
+		@include adaptiveValue ("margin-bottom", 105, 15, 0);
+		@include adaptiveValue ("margin-left", 330, 200, 0);
+	}
+	&__full-name {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__when {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__visitors {
+		@include adaptiveValue ("margin-bottom", 82, 10, 0);
+	}
+	&__button {
+		@include adaptiveValue ("padding-bottom", 174, 20, 0);
+		display: flex;
+		justify-content: center;
+	}
+	&__btn {
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include adaptiveValue ("width", 327, 127, 0);
+		@include adaptiveValue ("height", 88, 38, 0);
+		background: #5E6600;
+		border: 2px solid #000000;
+		font-family: 'Rufina';
+		font-weight: 700;
+		@include adaptiveValue ("font-size", 32, 16, 0);
+		@include adaptiveValue ("line-height", 48, 22, 0);
+		color: #FFFFFF;
+	}
+}
+.reservation__full-name, 
+.reservation__email, 
+.reservation__phone, 
+.reservation__date, 
+.reservation__time {
+	@include adaptiveValue ("margin-bottom", 46, 15, 0);
+}
+.reservation__firstname, 
+.reservation__lastname, 
+.reservation__email, 
+.reservation__phone, 
+.reservation__date, 
+.reservation__time, 
+.reservation__visitors {
+	border: 2px solid #000;
+}
+.reservation__firstname, 
+.reservation__lastname,  
+.reservation__date, 
+.reservation__time {
+	flex-basis: 48%;
+}
+.reservation {
+	input {
+		width: 100%;
+		height: 100%;
+		background-color: #EBF0E4;
+		@include adaptiveValue ("padding-top", 30, 5, 0);
+		@include adaptiveValue ("padding-bottom", 30, 5, 0);
+		@include adaptiveValue ("padding-left", 40, 10, 0);
+		@include adaptiveValue ("padding-right", 40, 10, 0);
+		@include adaptiveValue ("font-size", 24, 14, 0);
+		line-height: 140%;
+		letter-spacing: 0.02em;
+		color: #000000;
+		&::placeholder {
+			@include adaptiveValue ("font-size", 24, 14, 0);
+			line-height: 140%;
+			letter-spacing: 0.02em;
+			color: #000000;
+	}
+	}
+}
+select {
+	cursor: pointer;
+	background-color: #EBF0E4;
+	@include adaptiveValue ("padding-top", 30, 5, 0);
+	@include adaptiveValue ("padding-bottom", 30, 5, 0);
+	@include adaptiveValue ("padding-left", 40, 10, 0);
+	@include adaptiveValue ("padding-right", 40, 10, 0);
+	font-family: 'Lato';
+	@include adaptiveValue ("font-size", 24, 14, 0);
+	line-height: 140%;
+	letter-spacing: 0.02em;
+	color: #000000;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	appearance: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	}
+	select.reservation__time {
+		background: url('../img/Vector 1.svg') 95% 50%/25px 12px no-repeat;
+	}
+	select.reservation__visitors {
+		background: url('../img/Vector 1.svg') 97.5% 50%/25px 12px no-repeat;
+	}
+	.reservation__btn:hover {
+		box-shadow: 5px 5px 15px rgba(35, 35, 35, 0.482); 
+	}
+	@media (max-width: 550px) {
+		.reservation {
+			&__text {
+				@include adaptiveValue ("margin-left", 330, 70, 0);
+			}
+		}
+		select.reservation__time {
+			background: url('../img/Vector 1.svg') 95% 50%/13px 6px no-repeat;
+		}
+		select.reservation__visitors {
+			background: url('../img/Vector 1.svg') 97.5% 50%/13px 6px no-repeat;
+		}
+	}
