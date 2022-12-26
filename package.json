@@ -4,13 +4,14 @@
 	"description": "сборка gulp",
 	"main": "gulpfile.js",
 	"type": "module",
-	"homepage": "http://alinagladkova.github.io",
+	"homepage": "http://alinagladkova.github.io/FoodZero-",
 	"scripts": {
 		"dev": "gulp",
 		"build": "gulp build --build",
 		"zip": "gulp deployZIP --build",
 		"deploy": "gulp deployFTP --build",
-		"svgSprive": "gulp svgSprive"
+		"svgSprive": "gulp svgSprive",
+		"deploy": "gh-pages -d dist"
 	},
 	"author": "Fls",
 	"license": "ISC",
